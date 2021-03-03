@@ -13,20 +13,20 @@ body
 
 header
 {
-	background: rgba(66, 165, 245, 0.8);
+	background: rgba(66, 165, 245, 0.7);
 	display: flex;
 	width: 100%;
 	position: fixed;
 	justify-content: space-between;
-	line-height: 50px;
-	max-height: 50px;
+	line-height: 70px;
+	max-height: 70px;
 	padding: 0 20px;
 	z-index: 10000;
 }
 
 header .logo
 {
-	margin-top: 5px;
+	margin-top: 15px;
 	height: 40px;
 }
 
@@ -44,10 +44,11 @@ header .navegation .menu li
 header .navegation .menu li a
 {
 	color: #FFF;
-	font-weight: 400;
+	font-weight: 500;
 	margin-left: 50px;
 	margin-right: 50px;
 	text-decoration: none;
+	font-size: 18px;
 }
 
 .page
@@ -108,8 +109,21 @@ container
 }
 
 
-@media only screen and (max-width: 600px)
+@media only screen and (max-width: 875px)
 {
+	header
+	{
+		position: fixed;
+		padding-left: 0;
+		height: 75px;
+	}
+
+	header .logo
+	{
+		position: fixed;
+		left: 40px;
+	}
+
 	header .navegation
 	{
 		display: none;
@@ -117,22 +131,30 @@ container
 
 	header .navegation.active
 	{
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: #1DB954;
+		background: rgb(66, 165, 245);
 		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+		height: 100%;
+		position: fixed;
+		width: 100%;
 		z-index: 10;
+	}
+
+	header .navegation .menu
+	{
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+	}
+
+	header .navegation .menu li a
+	{
+		font-size: 25px;
 	}
 
 	.page
 	{
-		background: red;
+		padding-top: 70px;
 	}
 
 	.toggle
@@ -145,7 +167,7 @@ container
 		height: 40px;
 		position: fixed;
 		right: 40px;
-		top: 5px;
+		top: 15px;
 		width: 40px;
 		z-index: 10000;
 	}
